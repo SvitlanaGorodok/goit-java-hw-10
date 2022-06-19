@@ -28,9 +28,7 @@ public class TxtJson {
 
         try (PrintWriter out = new PrintWriter(new FileWriter(pathJson))) {
             Gson gson = new Gson();
-            for (User user : usersList) {
-                out.write(gson.toJson(user));
-            }
+                out.write(gson.toJson(usersList));
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
